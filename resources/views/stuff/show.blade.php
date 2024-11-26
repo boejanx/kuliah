@@ -2,9 +2,6 @@
 
 @section('content')
 
-<div class="container">
-    <h2>Detail Stuff</h2>
-
     <div class="card">
         <div class="card-header">
             <h5 class="card-title">{{ $stuff->name }}</h5>
@@ -25,6 +22,5 @@
             </form>
         </div>
     </div>
-</div>
 
 @endsection

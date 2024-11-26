@@ -2,8 +2,6 @@
 
 @extends('layouts.app')
 
-@section('title', 'Create Stuff')
-
 @section('content')
 <div class="card">
     <div class="card-header">

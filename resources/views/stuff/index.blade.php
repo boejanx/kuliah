@@ -11,13 +11,13 @@
                 </div>
             </div> <!-- /.card-header -->
             <div class="card-body p-0">
-                <table class="table table-sm">
+                <table class="table table-sm table-hover table-bordered">
                     <thead>
                         <tr>
-                            <th style="width: 10px">#</th>
-                            <th>Task</th>
-                            <th>Progress</th>
-                            <th style="width: 40px">Label</th>
+                            <th style="width: 30px">#</th>
+                            <th style="width: 150px">Code</th>
+                            <th>Nama</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,7 +29,7 @@
                             <td>
                                 <a href="{{url('/stuffs/'.$stuff->id)}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> show</a>
                                 <a href="{{ url('/stuffs/'.$stuff->id.'/edit') }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Edit</a>
-                                <form action="{{ url('/stuffs/delete'.$stuff->id) }}" method="POST" style="display:inline;">
+                                <form action="{{ url('/stuffs/delete/'.$stuff->id) }}" method="POST" style="display:inline;">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to delete this item?');"><i class="fa fa-trash"></i> Delete</button>

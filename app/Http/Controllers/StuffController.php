@@ -58,25 +58,25 @@ class StuffController extends Controller
         ]);
 
         // Ambil data dari database berdasarkan ID
-        $stuff = \App\Models\StuffModel::findOrFail($id);
+        $stuff = StuffModel::findOrFail($id);
 
         // Perbarui data
         $stuff->code = $request->code;
         $stuff->name = $request->name;
-        $stuff->save(); // Simpan perubahan ke database
+        $stuff->update(); // Simpan perubahan ke database
 
         // Redirect ke halaman index dengan pesan sukses
-        return redirect()->route('stuff.index')->with('success', 'Stuff updated successfully');
+        return redirect('/stuffs')->with('success', 'Stuff updated successfully');
     }
 
     public function delete($id) {
         // Ambil data dari database berdasarkan ID
-        $stuff = \App\Models\StuffModel::findOrFail($id);
+        $stuff = StuffModel::findOrFail($id);
 
         // Hapus data
         $stuff->delete();
 
         // Redirect ke halaman index dengan pesan sukses
-        return redirect()->route('stuff.index')->with('success', 'Stuff deleted successfully');
+        return redirect('/stuffs')->with('success', 'Stuff deleted successfully');
     }
 }

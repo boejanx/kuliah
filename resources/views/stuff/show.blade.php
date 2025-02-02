@@ -13,12 +13,12 @@
             <p class="card-text"><strong>Updated At:</strong> {{ $stuff->updated_at }}</p>
         </div>
         <div class="card-footer">
-            <a href="{{ url('/stuffs') }}" class="btn btn-secondary">Back to List</a>
+            <a href="{{ url('/stuffs') }}" class="btn btn-secondary">Kembali</a>
             <a href="{{ url('/stuffs/'.$stuff->id.'/edit') }}" class="btn btn-warning">Edit</a>
             <form action="{{ url('/stuffs/delete/'.$stuff->id) }}" method="POST" style="display:inline;">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin untuk menghapus item ini?');">Delete</button>
             </form>
         </div>
     </div>

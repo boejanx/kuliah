@@ -26,7 +26,7 @@
         <div class="form-group mb-3">
             <div class="col-sm-10 offset-sm-2">
                 <button type="submit" class="btn btn-primary">Update</button>
-                <a href="{{ url('/stuffs/index') }}" class="btn btn-secondary">Cancel</a>
+                <a href="{{ url('/stuffs') }}" class="btn btn-secondary">Cancel</a>
             </div>
         </div>
     </form>

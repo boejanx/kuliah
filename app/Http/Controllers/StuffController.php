@@ -16,7 +16,7 @@ class StuffController extends Controller
 
     public function create()
     {
-         return view('stuff.create');
+        return view('stuff.create');
     }
 
     public function store(Request $request)
@@ -34,7 +34,7 @@ class StuffController extends Controller
         $stuff->save(); // Simpan data ke database
 
         // Redirect ke halaman utama dengan pesan sukses
-        return redirect('/stuffs')->with('success', 'Stuff created successfully');
+        return redirect('/stuffs')->with('success', 'Stuff berhasil disimpan');
     }
 
     public function show($id)
@@ -66,7 +66,7 @@ class StuffController extends Controller
         $stuff->update(); // Simpan perubahan ke database
 
         // Redirect ke halaman index dengan pesan sukses
-        return redirect('/stuffs')->with('success', 'Stuff updated successfully');
+        return redirect('/stuffs')->with('success', 'Stuff berhasil diupdate');
     }
 
     public function delete($id) {
@@ -77,6 +77,6 @@ class StuffController extends Controller
         $stuff->delete();
 
         // Redirect ke halaman index dengan pesan sukses
-        return redirect('/stuffs')->with('success', 'Stuff deleted successfully');
+        return redirect('/stuffs')->with('success', 'Stuff berhasil dihapus');
     }
 }
